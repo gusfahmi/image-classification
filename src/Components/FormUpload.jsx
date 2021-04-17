@@ -64,7 +64,10 @@ export default function FormUpload() {
 				"https://entertrim-image-classification.herokuapp.com/knn",
 				formData,
 				{
-					headers: { "Content-Type": "application/x-www-form-urlencoded" },
+					headers: {
+						"Content-Type": "application/x-www-form-urlencoded",
+						Token: "Image_Classification",
+					},
 				}
 			)
 			.then((response) => {
