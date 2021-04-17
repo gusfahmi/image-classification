@@ -47,7 +47,6 @@ export default function Result() {
 	const dispatch = useDispatch();
 
 	const results = useSelector((state) => state.imageRedux.result);
-	console.log(results);
 	const { imageUrl, data } = results;
 
 	const sortResults = data.slice().sort((a, b) => {

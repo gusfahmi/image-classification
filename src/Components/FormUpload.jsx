@@ -60,9 +60,13 @@ export default function FormUpload() {
 		formData.append("image", file);
 
 		axios
-			.post("http://127.0.0.1:2020/knn", formData, {
-				headers: { "Content-Type": "application/x-www-form-urlencoded" },
-			})
+			.post(
+				"https://entertrim-image-classification.herokuapp.com/knn",
+				formData,
+				{
+					headers: { "Content-Type": "application/x-www-form-urlencoded" },
+				}
+			)
 			.then((response) => {
 				const { status } = response.data;
 				if (status === "error") {
